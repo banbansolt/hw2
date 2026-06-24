@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:columnCount="2">
+
+    <Button
+        android:id="@+id/btnAI"
+        android:text="AI"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_columnWeight="1"/>
+
+    <Button
+        android:id="@+id/btnScience"
+        android:text="과학"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_columnWeight="1"/>
+
+    <Button
+        android:id="@+id/btnHistory"
+        android:text="역사"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_columnWeight="1"/>
+
+    <Button
+        android:id="@+id/btnGame"
+        android:text="게임"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_columnWeight="1"/>
+
+</GridLayout>
