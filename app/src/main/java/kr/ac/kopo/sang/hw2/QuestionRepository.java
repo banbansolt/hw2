@@ -14,7 +14,9 @@ public class QuestionRepository {
                 "OpenAI",
                 "Meta",
                 "Amazon",
-                2));
+                2,
+                "Open으로 시작하는 AI 회사"
+        ));
 
         list.add(new Question(
                 "AI의 뜻은?",
@@ -22,7 +24,9 @@ public class QuestionRepository {
                 "Automatic Internet",
                 "Artificial Input",
                 "Advanced Interface",
-                1));
+                1,
+                "Artificial + Intelligence = 정답"
+        ));
 
         list.add(new Question(
                 "GPT의 G는?",
@@ -30,7 +34,9 @@ public class QuestionRepository {
                 "Graph",
                 "Generative",
                 "General",
-                3));
+                3,
+                "Generative Pre-trained Transformer"
+        ));
 
         list.add(new Question(
                 "생성형 AI가 아닌 것은?",
@@ -38,7 +44,9 @@ public class QuestionRepository {
                 "Gemini",
                 "Photoshop",
                 "Claude",
-                3));
+                3,
+                "AI가 아닌 건 '이미지/편집 프로그램'"
+        ));
 
         list.add(new Question(
                 "마이크로소프트의 AI 비서는?",
@@ -46,7 +54,9 @@ public class QuestionRepository {
                 "Claude",
                 "Copilot",
                 "ChatGPT",
-                3));
+                3,
+                "비행기 조종사처럼 돕는 AI"
+        ));
 
         return list;
     }
@@ -61,7 +71,9 @@ public class QuestionRepository {
                 "CO2",
                 "NaCl",
                 "O2",
-                1));
+                1,
+                "물 = H2O"
+        ));
 
         list.add(new Question(
                 "지구는 태양을 몇 일에 한 바퀴 공전하는가?",
@@ -69,7 +81,9 @@ public class QuestionRepository {
                 "30일",
                 "180일",
                 "720일",
-                1));
+                1,
+                "1년 = 365일"
+        ));
 
         list.add(new Question(
                 "빛의 속도는?",
@@ -77,7 +91,9 @@ public class QuestionRepository {
                 "3,000 km/s",
                 "30,000 km/s",
                 "300 km/s",
-                1));
+                1,
+                "가장 빠른 속도 = 30만 km/s"
+        ));
 
         list.add(new Question(
                 "산소의 원소기호는?",
@@ -85,7 +101,9 @@ public class QuestionRepository {
                 "O",
                 "C",
                 "N",
-                2));
+                2,
+                "숨 쉬는 기체 = O"
+        ));
 
         list.add(new Question(
                 "인체에서 피를 순환시키는 기관은?",
@@ -93,7 +111,9 @@ public class QuestionRepository {
                 "위",
                 "심장",
                 "간",
-                3));
+                3,
+                "피를 펌프처럼 보내는 기관"
+        ));
 
         return list;
     }
@@ -108,7 +128,9 @@ public class QuestionRepository {
                 "한자",
                 "가나",
                 "영문",
-                1));
+                1,
+                "우리나라 글자"
+        ));
 
         list.add(new Question(
                 "임진왜란이 일어난 해는?",
@@ -116,7 +138,9 @@ public class QuestionRepository {
                 "1492년",
                 "1692년",
                 "1792년",
-                1));
+                1,
+                "16세기 후반"
+        ));
 
         list.add(new Question(
                 "조선을 건국한 인물은?",
@@ -124,7 +148,9 @@ public class QuestionRepository {
                 "이성계",
                 "세종대왕",
                 "광해군",
-                2));
+                2,
+                "태조"
+        ));
 
         list.add(new Question(
                 "거북선을 만든 장군은?",
@@ -132,7 +158,9 @@ public class QuestionRepository {
                 "을지문덕",
                 "이순신",
                 "김유신",
-                3));
+                3,
+                "임진왜란"
+        ));
 
         list.add(new Question(
                 "대한민국 정부 수립 연도는?",
@@ -140,7 +168,9 @@ public class QuestionRepository {
                 "1948년",
                 "1950년",
                 "1960년",
-                2));
+                2,
+                "광복 이후 3년"
+        ));
 
         return list;
     }
@@ -155,7 +185,9 @@ public class QuestionRepository {
                 "Valve",
                 "Nintendo",
                 "Blizzard",
-                1));
+                1,
+                "마인크래프트 회사"
+        ));
 
         list.add(new Question(
                 "리그 오브 레전드 제작사는?",
@@ -163,7 +195,9 @@ public class QuestionRepository {
                 "Riot Games",
                 "Ubisoft",
                 "Capcom",
-                2));
+                2,
+                "LoL 만든 회사"
+        ));
 
         list.add(new Question(
                 "닌텐도의 대표 캐릭터는?",
@@ -171,7 +205,9 @@ public class QuestionRepository {
                 "링크",
                 "마리오",
                 "피카츄",
-                3));
+                3,
+                "빨간 모자 캐릭터"
+        ));
 
         list.add(new Question(
                 "포켓몬 시리즈를 만든 회사는?",
@@ -179,7 +215,9 @@ public class QuestionRepository {
                 "Valve",
                 "EA",
                 "Rockstar",
-                1));
+                1,
+                "닌텐도 IP"
+        ));
 
         list.add(new Question(
                 "배틀그라운드의 장르는?",
@@ -187,7 +225,9 @@ public class QuestionRepository {
                 "레이싱",
                 "배틀로얄",
                 "퍼즐",
-                3));
+                3,
+                "마지막 1명 생존"
+        ));
 
         return list;
     }

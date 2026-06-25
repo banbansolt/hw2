@@ -86,12 +86,18 @@
                 android:textSize="18sp"/>
         </RadioGroup>
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/btnNext"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:text="다음 문제"
             android:layout_marginTop="20dp"/>
+        <Button
+            android:id="@+id/btnHint"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="힌트 보기"
+            android:layout_marginTop="12dp"/>
 
     </LinearLayout>
 

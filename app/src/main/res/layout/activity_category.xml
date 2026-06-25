@@ -3,35 +3,99 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
-    android:columnCount="2">
+    android:columnCount="2"
+    android:rowCount="2">
 
-    <Button
-        android:id="@+id/btnAI"
-        android:text="AI"
+    <!-- AI -->
+    <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_columnWeight="1"/>
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnScience"
-        android:text="과학"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_columnWeight="1"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:src="@drawable/ca1"
+            android:scaleType="centerCrop"/>
 
-    <Button
-        android:id="@+id/btnHistory"
-        android:text="역사"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_columnWeight="1"/>
+        <Button
+            android:id="@+id/btnAI"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="AI"/>
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/btnGame"
-        android:text="게임"
+    <!-- 과학 -->
+    <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_columnWeight="1"/>
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:src="@drawable/ca2"
+            android:scaleType="centerCrop"/>
+
+        <Button
+            android:id="@+id/btnScience"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="과학"/>
+    </LinearLayout>
+
+    <!-- 역사 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:src="@drawable/ca3"
+            android:scaleType="centerCrop"/>
+
+        <Button
+            android:id="@+id/btnHistory"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="역사"/>
+    </LinearLayout>
+
+    <!-- 게임 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:src="@drawable/ca4"
+            android:scaleType="centerCrop"/>
+
+        <Button
+            android:id="@+id/btnGame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="게임"/>
+    </LinearLayout>
 
 </GridLayout>

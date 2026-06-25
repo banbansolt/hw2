@@ -1,9 +1,5 @@
 package kr.ac.kopo.sang.hw2;
 
-
-
-
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -26,90 +22,64 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        tvResultScore =
-                findViewById(R.id.tvResultScore);
+        tvResultScore = findViewById(R.id.tvResultScore);
+        tvGrade = findViewById(R.id.tvGrade);
+        btnRetry = findViewById(R.id.btnRetry);
+        btnRanking = findViewById(R.id.btnRanking);
 
-        tvGrade =
-                findViewById(R.id.tvGrade);
+        int score = getIntent().getIntExtra("score", 0);
 
-        btnRetry =
-                findViewById(R.id.btnRetry);
+        tvResultScore.setText("점수 : " + score);
 
-        btnRanking =
-                findViewById(R.id.btnRanking);
-
-        int score =
-                getIntent().getIntExtra(
-                        "score",
-                        0);
-
-        tvResultScore.setText(
-                "점수 : " + score);
-
+        // ===== 등급 계산 =====
         String grade;
+        if (score >= 90) grade = "S";
+        else if (score >= 80) grade = "A";
+        else if (score >= 70) grade = "B";
+        else if (score >= 60) grade = "C";
+        else grade = "F";
 
-        if(score >= 90)
-            grade = "S";
-        else if(score >= 80)
-            grade = "A";
-        else if(score >= 70)
-            grade = "B";
-        else if(score >= 60)
-            grade = "C";
-        else
-            grade = "F";
+        tvGrade.setText("등급 : " + grade);
 
-        tvGrade.setText(
-                "등급 : " + grade);
-
+        // ===== SharedPreferences =====
         SharedPreferences sp =
-                getSharedPreferences(
-                        "QUIZ_DATA",
-                        MODE_PRIVATE);
+                getSharedPreferences("QUIZ_DATA", MODE_PRIVATE);
 
-        int best =
-                sp.getInt(
-                        "BEST_SCORE",
-                        0);
+        String nickname = sp.getString("NICKNAME", "플레이어");
 
-        if(score > best){
+        int best = sp.getInt("BEST_SCORE", 0);
+        int count = sp.getInt("PLAY_COUNT", 0);
 
-            sp.edit()
-                    .putInt(
-                            "BEST_SCORE",
-                            score)
-                    .apply();
+        // ===== 최고점 갱신 =====
+        if (score > best) {
+            best = score;
         }
 
-        int count =
-                sp.getInt(
-                        "PLAY_COUNT",
-                        0);
+        // ===== 기존 RANK_LIST 가져오기 =====
+        String oldRank = sp.getString("RANK_LIST", "");
 
-        sp.edit()
-                .putInt(
-                        "PLAY_COUNT",
-                        count + 1)
-                .apply();
+        // ===== 새 랭킹 데이터 추가 =====
+        String newRank = nickname + ":" + score + ",";
 
+        String updatedRank = oldRank + newRank;
+
+        // ===== 저장 =====
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putInt("BEST_SCORE", best);
+        editor.putInt("PLAY_COUNT", count + 1);
+        editor.putString("RANK_LIST", updatedRank); // ⭐ 핵심 추가
+        editor.apply();
+
+        // ===== 버튼 =====
         btnRetry.setOnClickListener(v -> {
-
-            Intent intent =
-                    new Intent(
-                            this,
-                            MainActivity.class);
-
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
-
             finish();
         });
 
         btnRanking.setOnClickListener(v -> {
-
-            startActivity(
-                    new Intent(
-                            this,
-                            RankingActivity.class));
+            Intent intent = new Intent(this, RankingActivity.class);
+            startActivity(intent);
         });
     }
 }
