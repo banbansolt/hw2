@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F4F6F9">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,30 +16,164 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="앱 정보"
-            android:textSize="30sp"
-            android:textStyle="bold"/>
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#1E293B"
+            android:layout_marginBottom="6dp" />
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="4dp"
+            android:background="#2A5C91"
+            android:layout_marginBottom="24dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="3dp"
+            app:cardBackgroundColor="#2A5C91">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="AI Quiz Challenge"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="사용자가 다양한 분야의 퀴즈를 풀며 지식을 향상시킬 수 있는 교육용 게임입니다."
+                    android:textSize="15sp"
+                    android:textColor="#E2E8F0"
+                    android:lineSpacingMultiplier="1.3" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="AI Quiz Challenge는 사용자가 다양한 분야의 퀴즈를 풀며 지식을 향상시킬 수 있는 교육용 게임입니다."
-            android:textSize="18sp"
-            android:layout_marginTop="20dp"/>
+            android:text="주요 기능"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#1E293B"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="4dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="•  카테고리 선택"
+                    android:textSize="15sp"
+                    android:textColor="#334155" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F5F9" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="•  퀴즈 진행 및 타이머"
+                    android:textSize="15sp"
+                    android:textColor="#334155" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F5F9" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="•  점수 계산 및 최고점 저장"
+                    android:textSize="15sp"
+                    android:textColor="#334155" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F5F9" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="•  랭킹 실시간 조회"
+                    android:textSize="15sp"
+                    android:textColor="#334155" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="개발 환경\nAndroid Studio\nJava\nXML\nMaterial Design"
-            android:textSize="18sp"
-            android:layout_marginTop="20dp"/>
+            android:text="개발 환경"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#1E293B"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="4dp" />
 
-        <TextView
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="주요 기능\n• 카테고리 선택\n• 퀴즈 진행\n• 타이머\n• 점수 계산\n• 최고점 저장\n• 랭킹 조회"
-            android:textSize="18sp"
-            android:layout_marginTop="20dp"/>
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#EBF3FC">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Android Studio / Material Design"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#2A5C91"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Java &amp; XML"
+                    android:textSize="14sp"
+                    android:textColor="#475569"
+                    android:textStyle="italic" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
-
 </ScrollView>

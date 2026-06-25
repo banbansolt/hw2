@@ -5,8 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp">
+    android:gravity="center_horizontal"
+    android:padding="28dp"
+    android:background="#F4F6F9">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -14,24 +20,52 @@
         android:text="닉네임 입력"
         android:textSize="26sp"
         android:textStyle="bold"
-        android:layout_marginBottom="20dp"/>
+        android:textColor="#1E293B"
+        android:layout_marginBottom="8dp"/>
 
-    <com.google.android.material.textfield.TextInputLayout
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="퀴즈 챌린지에서 사용할 이름을 적어주세요"
+        android:textSize="14sp"
+        android:textColor="#64748B"
+        android:layout_marginBottom="32dp"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"/>
+
+    <EditText
+        android:id="@+id/etNickname"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etNickname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="닉네임"/>
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_height="56dp"
+        android:hint="닉네임을 입력하세요"
+        android:textColorHint="#94A3B8"
+        android:textColor="#1E293B"
+        android:textSize="16sp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginBottom="16dp"
+        />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnNext"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="56dp"
         android:text="시작하기"
-        android:layout_marginTop="20dp"/>
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#2A5C91"
+        app:cornerRadius="14dp"
+        android:elevation="3dp"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"/>
 
 </LinearLayout>

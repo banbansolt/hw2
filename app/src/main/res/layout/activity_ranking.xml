@@ -1,77 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp">
+    android:padding="24dp"
+    android:background="#F4F6F9">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="🏆 랭킹"
-        android:textStyle="bold"
-        android:textSize="32sp"/>
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="🏆  랭킹"
+    android:textStyle="bold"
+    android:textSize="32sp"
+    android:textColor="#1E293B" />
 
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp">
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_marginTop="24dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp">
+        <TextView
+        android:id="@+id/tvRank1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1위"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#F59E0B" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tvRank2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:text="2위"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textColor="#4A90E2" />
 
-            <TextView
-                android:id="@+id/tvRank1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🥇 1위 홍길동 - 100점"
-                android:textSize="22sp"/>
+        <TextView
+            android:id="@+id/tvRank3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3위"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textColor="#2A5C91" />
 
-            <TextView
-                android:id="@+id/tvRank2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🥈 2위 김철수 - 90점"
-                android:textSize="22sp"
-                android:layout_marginTop="12dp"/>
+        <TextView
+            android:id="@+id/tvRank4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4위"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"
+            android:textColor="#475569" />
 
-            <TextView
-                android:id="@+id/tvRank3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🥉 3위 이영희 - 80점"
-                android:textSize="22sp"
-                android:layout_marginTop="12dp"/>
+        <TextView
+            android:id="@+id/tvRank5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5위"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"
+            android:textColor="#475569" />
 
-            <TextView
-                android:id="@+id/tvRank4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4위 박민수 - 70점"
-                android:textSize="22sp"
-                android:layout_marginTop="12dp"/>
-
-            <TextView
-                android:id="@+id/tvRank5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="5위 최지은 - 60점"
-                android:textSize="22sp"
-                android:layout_marginTop="12dp"/>
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
     <Button
         android:id="@+id/btnBack"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginTop="30dp"
-        android:text="뒤로가기"/>
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:text="뒤로가기"
+        android:textSize="16sp"
+        android:textColor="#475569"
+        app:strokeColor="#CBD5E1"
+        app:strokeWidth="1.5dp"
+        app:cornerRadius="14dp" />
 
 </LinearLayout>
