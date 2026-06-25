@@ -23,13 +23,7 @@
         android:letterSpacing="0.05"
         android:layout_marginBottom="6dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="AI와 함께하는 지식 대결"
-        android:textSize="14sp"
-        android:textColor="#64748B"
-        android:layout_marginBottom="32dp"/>
+
 
     <ImageView
         android:id="@+id/imgLogo"

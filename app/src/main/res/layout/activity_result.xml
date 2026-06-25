@@ -45,7 +45,7 @@
         android:textSize="17sp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
-        app:backgroundTint="#2A5C91"
+        android:backgroundTint="#2A5C91"
         app:cornerRadius="14dp"
         android:layout_marginTop="40dp"
         android:elevation="3dp" />
@@ -58,7 +58,7 @@
         android:textSize="17sp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
-        app:backgroundTint="#4A90E2"
+        android:backgroundTint="#4A90E2"
         app:cornerRadius="14dp"
         android:layout_marginTop="12dp"
         android:elevation="2dp" />

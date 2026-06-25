@@ -3,17 +3,17 @@ package kr.ac.kopo.sang.hw2;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.Button; // MaterialButton 대신 일반 Button 임포트
+import android.widget.EditText; // TextInputEditText 대신 일반 EditText 임포트
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.button.MaterialButton;
-import com.google.android.material.textfield.TextInputEditText;
-
 public class NicknameActivity extends AppCompatActivity {
 
-    TextInputEditText etNickname;
-    MaterialButton btnNext;
+    // ⭐ 타입을 일반 클래스로 변경 (XML에 어떤 태그가 와도 캐스팅 에러가 안 납니다)
+    EditText etNickname;
+    Button btnNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

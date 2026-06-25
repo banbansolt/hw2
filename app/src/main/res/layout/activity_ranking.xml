@@ -9,12 +9,12 @@
     android:background="#F4F6F9">
 
     <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="🏆  랭킹"
-    android:textStyle="bold"
-    android:textSize="32sp"
-    android:textColor="#1E293B" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🏆 랭킹"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:textColor="#1E293B" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,16 +22,16 @@
         android:orientation="vertical"
         android:padding="20dp"
         android:layout_marginTop="24dp"
-        android:background="#FFFFFF"
-        android:elevation="4dp">
+        android:background="#FFFFFF">
+
         <TextView
-        android:id="@+id/tvRank1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1위"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:textColor="#F59E0B" />
+            android:id="@+id/tvRank1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1위"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#F59E0B" />
 
         <TextView
             android:id="@+id/tvRank2"
@@ -73,17 +73,17 @@
 
     </LinearLayout>
 
-    <Button
+    <!-- ⭐️ 여기만 중요: MaterialButton 유지 -->
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnBack"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginTop="32dp"
         android:text="뒤로가기"
         android:textSize="16sp"
-        android:textColor="#475569"
+        app:cornerRadius="14dp"
+        app:strokeWidth="1dp"
         app:strokeColor="#CBD5E1"
-        app:strokeWidth="1.5dp"
-        app:cornerRadius="14dp" />
-
+        android:textColor="#475569"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
 </LinearLayout>

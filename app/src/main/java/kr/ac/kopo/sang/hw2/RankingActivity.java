@@ -2,10 +2,12 @@ package kr.ac.kopo.sang.hw2;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+// ⭐️ MaterialButton 타입 불일치 해결을 위해 임포트 추가
+import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -19,7 +21,8 @@ public class RankingActivity extends AppCompatActivity {
     TextView tvRank4;
     TextView tvRank5;
 
-    Button btnBack;
+    // ⭐️ XML의 OutlinedButton 스타일과 호환되도록 MaterialButton으로 타입 수정!
+    MaterialButton btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +73,12 @@ public class RankingActivity extends AppCompatActivity {
         Collections.sort(ranks, new Comparator<String[]>() {
             @Override
             public int compare(String[] a, String[] b) {
-                return Integer.parseInt(b[1]) - Integer.parseInt(a[1]);
+                try {
+                    // 예외 처리 추가: 안전하게 숫자로 변환하여 정렬
+                    return Integer.parseInt(b[1].trim()) - Integer.parseInt(a[1].trim());
+                } catch (NumberFormatException e) {
+                    return 0;
+                }
             }
         });
 
@@ -90,11 +98,11 @@ public class RankingActivity extends AppCompatActivity {
             String text;
 
             if (i == 0)
-                text = "🥇 1위 " + name + " - " + score + "점";
+                text = "1위 " + name + " - " + score + "점";
             else if (i == 1)
-                text = "🥈 2위 " + name + " - " + score + "점";
+                text = "2위 " + name + " - " + score + "점";
             else if (i == 2)
-                text = "🥉 3위 " + name + " - " + score + "점";
+                text = "3위 " + name + " - " + score + "점";
             else
                 text = (i + 1) + "위 " + name + " - " + score + "점";
 

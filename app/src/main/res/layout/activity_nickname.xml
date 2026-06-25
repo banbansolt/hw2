@@ -36,22 +36,36 @@
         android:layout_height="0dp"
         android:layout_weight="0.2"/>
 
-    <EditText
-        android:id="@+id/etNickname"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:hint="닉네임을 입력하세요"
-        android:textColorHint="#94A3B8"
-        android:textColor="#1E293B"
-        android:textSize="16sp"
-        android:inputType="text"
-        android:maxLines="1"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        />
+        app:hintEnabled="false"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopStart="14dp"
+        app:boxCornerRadiusTopEnd="14dp"
+        app:boxCornerRadiusBottomStart="14dp"
+        app:boxCornerRadiusBottomEnd="14dp"
+        app:boxStrokeColor="#2A5C91"
+        app:boxStrokeWidth="1.5dp">
 
-    <com.google.android.material.button.MaterialButton
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNickname"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="닉네임을 입력하세요"
+            android:textColorHint="#94A3B8"
+            android:textColor="#1E293B"
+            android:textSize="16sp"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@android:color/transparent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
         android:id="@+id/btnNext"
         android:layout_width="match_parent"
         android:layout_height="56dp"
